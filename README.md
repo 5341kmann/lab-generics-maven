@@ -9,7 +9,7 @@ You can run experiments on dynamic arrays with the class
 You can run experiments on predicates and searching with the class
 `edu.grinnell.csc207.experiments.SearchExperiments`.
 
-Authors:
+Authors: Jafar and Grant
 
 * Samuel A. Rebelsky (original code)
 * Your Name Here (updates)

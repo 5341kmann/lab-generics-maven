@@ -17,7 +17,7 @@ public class SimpleDynamicArray<T> implements DynamicArray<T> {
    * All the known values in the array. values.length > the largest
    * i used in set.
    */
-  T[] values;
+  public T[] values;
 
   // +--------------+------------------------------------------------
   // | Constructors |
@@ -50,8 +50,10 @@ public class SimpleDynamicArray<T> implements DynamicArray<T> {
     // If the array is not big enough, expand it
     if (this.values.length <= i) {
       int newsize = this.values.length * 2;
+      // System.err.println("Array Expanded.");
       while (newsize <= i) {
         newsize *= 2;
+        // System.err.println("Array Expanded.");
       } // while
       this.values = Arrays.copyOf(this.values, newsize);
     } // if the array is no big enough

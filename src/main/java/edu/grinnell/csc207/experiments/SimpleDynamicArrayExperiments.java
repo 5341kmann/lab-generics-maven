@@ -1,10 +1,9 @@
 package edu.grinnell.csc207.experiments;
 
-import edu.grinnell.csc207.util.DynamicArray;
-import edu.grinnell.csc207.util.SimpleDynamicArray;
-
 import java.io.PrintWriter;
 import java.math.BigInteger;
+import edu.grinnell.csc207.util.DynamicArray;
+import edu.grinnell.csc207.util.SimpleDynamicArray;
 
 /**
  * Some simple experiments with dynamic arrays.
@@ -18,8 +17,7 @@ public class SimpleDynamicArrayExperiments {
   /**
    * Square a big integer.
    *
-   * @param i
-   *   The value to square.
+   * @param i The value to square.
    *
    * @return i*i.
    */
@@ -34,27 +32,37 @@ public class SimpleDynamicArrayExperiments {
   /**
    * Run the experiments.
    *
-   * @param args
-   *   Command-line arguments (ignored).
+   * @param args Command-line arguments (ignored).
    */
   public static void main(String[] args) {
     PrintWriter pen = new PrintWriter(System.out, true);
-    DynamicArray<BigInteger> numbers =
-        new SimpleDynamicArray<BigInteger>();
+    DynamicArray<BigInteger> numbers = new SimpleDynamicArray<BigInteger>();
 
-    // Set some values
-    for (int i = 0; i < 10; i++) {
-      numbers.set(i, BigInteger.valueOf(i));
-    } // for i
+    // // Set some values
+    // for (int i = 0; i < 10; i++) {
+    //   numbers.set(i, BigInteger.valueOf(i));
+    // } // for i
 
-    // Get some values
-    for (int i = 0; i < 10; i++) {
-      pen.println("numbers[" + i + "] = " + numbers.get(i));
-    } // for i
+    // // Get some values
+    // for (int i = 0; i < 10; i++) {
+    //   pen.println("numbers[" + i + "] = " + numbers.get(i));
+    // } // for i
 
-    // Do some simple computations
+    // // Do some simple computations
+    // for (int i = 0; i < 10; i++) {
+    //   pen.println(numbers.get(i) + "^2 = " + square(numbers.get(i)));
+    // } // for i
+
+    // Making the String type dynamic array
+    DynamicArray<String> strings = new SimpleDynamicArray<String>();
+
+    // Setting the string values
     for (int i = 0; i < 10; i++) {
-      pen.println(numbers.get(i) + "^2 = " + square(numbers.get(i)));
-    } // for i
+      strings.set(i, numbers.get(i).toString());
+    }
+
+    for (int i = 0; i < 10; i++) {
+      pen.println("strings[" + i + "] = " + strings.get(i));
+    } // for
   } // main(String[])
 } // class SimpleDynamicArrayExperiment
