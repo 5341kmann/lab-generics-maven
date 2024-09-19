@@ -36,6 +36,12 @@ public class SearchExperiments {
         + SearchUtils.search(strings, SmallString.PRED));
     pen.println("An odd integer: "
         + SearchUtils.search(numbers, OddInteger.PRED));
+
+    // Switching the search predicate will not work.
+    // pen.println("A small string: "
+    //     + SearchUtils.search(strings, OddInteger.PRED));
+    // pen.println("An odd integer: "
+    //     + SearchUtils.search(numbers, SmallString.PRED));
   } // main(String[])
 
 } // class SearchExperiments

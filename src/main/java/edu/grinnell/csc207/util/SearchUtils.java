@@ -3,7 +3,7 @@ package edu.grinnell.csc207.util;
 /**
  * Some simple search utilities.
  */
-public class SearchUtils {
+public class SearchUtils<T> {
   /**
    * Find the first value for which a predicate holds.
    *
